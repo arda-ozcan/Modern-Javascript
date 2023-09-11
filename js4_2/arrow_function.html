@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+<body>
+    
+
+    <script>
+        //ES5
+
+        // function hi() {
+        //     console.log("hi");
+        // }
+
+            var hiES5 = function(isim) {
+                console.log("hi" + isim);
+            }
+            
+            hiES5(" arda");
+
+        //ES6 Arrow Function
+
+        
+        const hiES6 = (isim) => { console.log("hi" + isim); }
+        hiES6(" arda");
+
+        //ES5
+        var toplamES5 = function(a,b) {
+            return a+b;
+        }
+        var sonuc = toplamES5(5,5);
+        console.log(sonuc);
+
+        //ES6
+        const toplamES6 = (a,b) => { return a+b;}
+        var sonuc6 = toplamES6(6,6);
+        console.log(sonuc6);
+
+    </script>
+
+</body>
+</html>
