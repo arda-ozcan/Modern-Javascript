@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Operator</title>
+</head>
+<body>
+    
+
+    <script>
+        // const msj = ["benim", "adım", "onur", "arda"];
+
+        // let sonuc = "";
+        // for(let i of msj) {
+        //     sonuc += i + " ";
+        // }
+        // console.log(sonuc);
+
+        // console.log(...msj);
+
+
+        // const dizi1 = ["bir", "iki"];
+        // const dizi2 = ["uc", "dort"];
+
+        // const dizi3 = [...dizi1, ...dizi2];
+
+
+        const sayilar1 = [1,2,3,4];
+        // const sayilar2 = sayilar1; //referans kopyalama
+        const sayilar2 = [...sayilar1]; //değer kopyalama
+
+
+        sayilar1[0] = 1905;
+        console.log(sayilar1,sayilar2);
+
+
+        const user = {
+            username: "arda",
+            gmail: "arda@gmail.com"
+        }
+
+        const address = {
+            username: "onur", //son olan diğerini ezer
+            city: "Antalya"
+        }
+
+        console.log({...user},{...address});
+
+
+        //rest parameters
+        function toplam(...args) {
+            let sonuc = 0;
+
+            for(let sayi of args) {
+                sonuc += sayi;
+            }
+            return sonuc;
+        }
+
+        console.log(toplam(10,20,30));
+        console.log(toplam(10,20,30,40,1905));
+
+
+        function bilgileriGoster(isim,soyad,...adres) {
+            console.log(isim,soyad,adres);
+        }
+
+        bilgileriGoster("onur", "arda", "antalya", "merkez");
+    </script>
+
+</body>
+</html>
