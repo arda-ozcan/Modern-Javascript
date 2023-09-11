@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    
+
+    <script>
+        // const sayilar = [1,5,6,8,12,56,78];
+        // const tekSayilar = [];
+        // for(let sayi of sayilar) {
+        //     if(sayi % 2 == 1) {
+        //         // console.log(sayi + " tek bir sayıdır.");
+        //         tekSayilar.push(sayi);
+        //     }
+        // }
+
+        // const sayilar = [1,5,6,8,12,56,78];
+        // const tekSayilarKontrol = (sayi) => sayi % 2 ==1;
+        // const tekSayilar = sayilar.filter(tekSayilarKontrol); 
+        // console.log(tekSayilar);
+
+
+        const sayilar = [1,5,6,8,12,56,78];
+        const urunler = [
+            {urunAdi : "iphone13", fiyat: 55000},
+            {urunAdi : "iphone14", fiyat: 155000},
+            {urunAdi : "iphone15", fiyat: 255000},
+            {urunAdi : "iphone16", fiyat: 355000}
+        ]
+        // const tekSayilar = sayilar.filter((sayi) => sayi % 2 ==1); 
+        // const tekSayilar = sayilar.map((sayi) => sayi % 2 ==1);  //T-F şeklinde geri dönüş yapar. 
+        // const sonuc = urunler.map(urun => urun.urunAdi);
+        // const filtrenenUrunler = urunler.filter(urun => urun.fiyat > 205000).map(urun => urun.urunAdi);
+        // const sonuc = urunler.findIndex(urun => urun.fiyat > 150000);
+        
+        const sonuc = urunler.find(urun => urun.fiyat > 150000); //ilk değeri getirir
+        console.log(sonuc);
+
+    </script>
+
+</body>
+</html>
